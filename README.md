@@ -1,1 +1,2 @@
-# Comptetive-Programming-Algorithme
+# Comptetive-Programming-Algorithm
+Here are some algorithm ,which used often to solve comptetive programming problem
