@@ -60,20 +60,40 @@ class Graph
    }
 
 };
+/*
+a->b
+a->e
+a->f
+e->b
+e->g
+b>h
+b>f
+g>f
+g->h
+h>f
+
+
+
+
+
+*/
 int main()
 { 
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   Graph<string> g;
-  g.addEdge("A","B");
-  g.addEdge("A","C");
-  g.addEdge("B","D");
-  g.addEdge("A","K");
-  g.addEdge("B","C");
-  g.addEdge("I","B");
-  g.addEdge("K","B");
-  g.print();
-  g.BFS("A");
+  g.addEdge("a","b");
+  g.addEdge("a","e");
+  g.addEdge("a","f");
+  g.addEdge("e","b");
+  g.addEdge("e","g");
+  g.addEdge("b","h");
+  g.addEdge("g","f");
+  g.addEdge("b","f");
+  g.addEdge("g","h");
+  g.addEdge("h","f");
+  // g.print();
+  g.BFS("h");
 
   return 0;
 }

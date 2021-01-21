@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
   int coins[]={1,2,5,10,20,50,100,200,500,2000};
-  //number of coin you want to mak a change
+  //number of coin you want to make a change
   int n;
   cin>>n;
   int dp[10000]={0};
