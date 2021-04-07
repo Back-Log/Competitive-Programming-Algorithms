@@ -6,7 +6,39 @@ using namespace std;
 #define MIN -1e9-7
 #define mem memset(a, 0, sizeof(a))
 #define pb push_back
-
+std::vector<int> factors;
+int val=1e6+2;
+ 
+void get_prime()
+{
+  vector<int>prime(val,0);
+  for(int i=3;i<=val;i+=2)
+  {
+    prime[i]=1;
+  }
+  //mark all the even number as non prime
+  for(int i=3;i*i<=val;i+=2)
+  {
+    if(prime[i]==1)
+    {
+        for(int j=i*i;j<=val;j+=i)
+        {
+            prime[j]=0;
+        }
+    }
+  }
+  prime[0]=prime[1]=0;
+  prime[2]=1;
+ 
+  for(int i=2;i<=val;i++)
+  {
+   if(prime[i]==1)
+   {
+    factors.push_back(i);
+   }
+  }
+ 
+}
 vector<int>get_factors(vector<int>&primes,int n)
 {
     vector<int>ans;
