@@ -55,6 +55,7 @@ int main()
   g.addEdge(2,3);
   g.addEdge(3,4);
   g.addEdge(4,5);
+  g.DFS(0);
 cout<<g.total_connected_component()<<endl;
 
   return 0;
