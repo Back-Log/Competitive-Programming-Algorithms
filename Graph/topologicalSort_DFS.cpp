@@ -1,4 +1,6 @@
-/*Life is onetime offer ,use it well*/
+/*
+Life is onetime offer ,use it well
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
