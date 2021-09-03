@@ -1,6 +1,33 @@
-#include<bit/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
+const int N = (int)1e5 + 100;
+vector<int>g[N];
+vector<bool>vis(N);
+void DFS(int src)
+{
+  vis[src] = true;
+  for (auto i : g[src])
+  {
+    if (!vis[i])
+    {
+      DFS(i);
+    }
+  }
+}
+int main()
+{
 
+  for (int i = 0; i < N; i++)
+  {
+    g[i].clear();
+  }
+  vis.clear();
+  vis.resize(N);
+
+
+  return 0;
+}
+/*
 template<typename T>
 class Graph{
  public:
@@ -8,21 +35,21 @@ class Graph{
 map<T,bool>visited;
  void addEdge(int u,int v)
  {
- 	l[u].pb(v);
- 	l[v].pb(u);
+  l[u].pb(v);
+  l[v].pb(u);
  }
  map<T,bool>visited;
  void DFS(T src)
  {
- 	visited[src]=true;
- 	cout<<src<<" ";
- 	for(auto i:l[src])
- 	{
- 		if(!visited[i])
- 		{
- 			DFS(i);
- 		}
- 	}
+  visited[src]=true;
+  cout<<src<<" ";
+  for(auto i:l[src])
+  {
+    if(!visited[i])
+    {
+      DFS(i);
+    }
+  }
  }
 
 
@@ -39,5 +66,6 @@ int main()
   g.DFS(0);
 
 
-	return 0;
+  return 0;
 }
+*/
